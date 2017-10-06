@@ -6,6 +6,13 @@ public class funcaoComRetorno {
 // Criando uma função simples
 //TIPO 1 Função sem retorno e sem parâmetros
 
+    public static double pedirNumero() {
+        Scanner e = new Scanner(System.in);
+        System.out.print("Digite um número: ");
+        double num = e.nextDouble();
+        return num;
+    }
+
     public static void criarMenu() {
 
         //Colocar o que vai aconteer ao executar
@@ -30,41 +37,33 @@ public class funcaoComRetorno {
     }
 
     public static void calcularDobro() {
-        Scanner e = new Scanner(System.in);
+
         double n, dobro;
-        System.out.print("Digite um número: ");
-        n = e.nextDouble();
+        n = pedirNumero();
         dobro = n * 2;
         System.out.println("Dobro de " + n + " = " + dobro);
     }
 
     public static void somar2Numeros() {
-        Scanner e = new Scanner(System.in);
-        int n, o, soma;
-        System.out.print("Digite um número: ");
-        n = e.nextInt();
-        System.out.print("Digite outro número: ");
-        o = e.nextInt();
+        double n, o, soma;
+        n = pedirNumero();
+        o = pedirNumero();
         soma = o + n;
         System.out.println("A soma de " + n + " + " + o + " = " + soma);
     }
 
     public static void raizQuadrada() {
-        Scanner e = new Scanner(System.in);
         double n, resultado;
-        System.out.print("Digite um número: ");
-        n = e.nextInt();
+        n = pedirNumero();
         resultado = Math.sqrt(n);
         System.out.println("A raiz quadrada de " + n + " = " + resultado);
     }
 
     public static void calcQuadrado() {
-        Scanner e = new Scanner(System.in);
         double n, resultado;
-        System.out.print("Digite um número: ");
-        n = e.nextInt();
+        n = pedirNumero();
         resultado = Math.pow(n, 2);
-        System.out.println("A raiz quadrada de " + n + " = " + resultado);
+        System.out.println(n + " elevado ao quadrado = " + resultado);
     }
 
     public static void calcTab(int x) {
