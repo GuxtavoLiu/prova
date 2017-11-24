@@ -12,7 +12,27 @@ public class atividade09 {
         int n = e.nextInt();
         return n;
     }
+    // === RESOLVER FATORIAL SEM LAÇO DE REPETIÇÃO ===
+    //========= Ex05 =========
+
+    public static int fat(int a) {
+        if (a == 1) {
+            return 1;
+        } else {
+            return a * fat(a - 1);
+        }
+    }
+
     //========= Ex02 =========
+    public static int contarNegativos(int[] numeros) {
+        int quantidade = 0;
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] < 0) {
+                quantidade++;
+            }
+        }
+        return quantidade;
+    }
 
     public static int gerarAleatorio() {
 //        Guarda o valor da função pedirNumero na variavel num
@@ -60,15 +80,6 @@ public class atividade09 {
         }
         return mes;
 
-    }
-
-    //========= Ex05 =========
-    public static int fat(int a) {
-        if (a == 1) {
-            return 1;
-        } else {
-            return a * fat(a - 1);
-        }
     }
 
     public static void main(String[] args) {
